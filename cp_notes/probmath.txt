@@ -1,0 +1,11 @@
+*Problem about GCD*
+
+Such a nice problem, given a range you need to find a pair a, b, where both of them lie in the original interval and they have gcd g.
+In particular you want to find a couple a : b-a is maximal and between these couple you have to chose the one with minumum a. 
+
+-KEY IDEA-
+Now the fact is that basically you can say that thanks to the density of primes there will be a prime every ~logl with l being the right
+extreme of the interval, so you can lineary check the couples in order and the expected complexity will be quite low.
+
+Another interesting thing that lies behind the well known 1/logn desity of primes is that it is an approximation of *productory(1-1/p)*
+that actually means the probability that a number is not divisible for each prime before n.

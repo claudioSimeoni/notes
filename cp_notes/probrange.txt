@@ -1,0 +1,22 @@
+*Subsequences Summing to Sevens*
+
+You have an array and you need to find out how many substrings have sum = 0 % 7 in O(nlogn).
+
+*TOOL LEARNED* (also used in *Subarray Sums II* or *Subarray Divisibility*)
+
+Using prefix sum but generally while iterating through an array you can hold information about it in a set or a map, 
+so you can easily search for an information in O(logn).
+
+*Haybale Stacking* 
+
+You basically have n input of the form a b, each input means add a haybale in the range a b, even if the query is not this,
+you just want to compute the heigth of each stack of haybales.
+
+*TOOL LEARNED* (also used e.g. in *Restaurant Customers*) /I will call this trick "ones trick"/ 
+
+In general when you have a group of intervals and you want to compute at a certain moment how many of them are occurring, the idea
+is to create an array where there is a 1 every time an event starts and a -1 when an event ends, then you just prefix sum and there
+you have it.
+
+
+

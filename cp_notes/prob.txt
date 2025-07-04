@@ -1,0 +1,9 @@
+*Range Update Query* 
+
+If you want to update a whole range by summing x to every element one way to do it is to keep in the segment the differences 
+between consecutive elements and then updating just the edges, then for a query you basically prefix sum. 
+
+*List Removal* 
+
+Istructive because it teaches you that you can store almost every information in a segment tree, in this case you want to 
+store how many elements you have in every range. 

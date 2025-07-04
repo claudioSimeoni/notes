@@ -1,0 +1,9 @@
+*Fix Flooded Floor*
+
+-Tip- When you need to do a dp in a grid such as this one on a few layers you should consider to go one column at a time. 
+                                                                                                                        ##..#.##..
+                                                                                                                        #.......##
+
+*Counting Towers* 
+
+This is such a great dp problem, it shows how dp is actually just recursion, you need to choose properly what to recurr on. 

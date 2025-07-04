@@ -1,0 +1,131 @@
+/*
+CSS Selectors & Basics:
+- Selectors can target an entire element type, a class (.classname), or an ID (#idname).
+- The universal selector (*) affects all elements.
+- Multiple elements or classes can be targeted by separating them with a comma (e.g., element1, element2).
+- Descendant selectors (parent child) apply styles to nested elements.
+*/
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Class and ID selectors */
+.important {
+    background-color: rgb(118, 175, 118);
+    opacity: 0.7;
+}
+
+#second {
+    background-color: yellow;
+}
+
+#third {
+    border-style: solid double dotted dashed;
+    border-width: 10px medium 20px thick;
+    border-color: red blue green yellow;
+}
+
+#fourth {
+    border-radius: 10px;
+    border: thick solid purple;
+    padding: 30px 20px 10px;
+    outline: dotted 2px black;
+    outline-offset: 10px;
+    height: auto;
+    width: 100px;
+}
+
+#txt {
+    text-align: left;
+    text-align-last: center;
+    text-decoration: overline underline blue dashed 15px;
+    font-size: 2rem;
+}
+
+/* Background properties */
+body {
+    background-image: url("https://thumbs.dreamstime.com/b/spring-wallpaper-creating-award-winning-photograph-pic-encapsulates-timeless-beauty-tranquility-nature-351384024.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Paragraphs */
+p {
+    margin: 50px 23% 40px 20%; /* top, right, bottom, left */
+    text-transform: capitalize;
+    text-indent: 20px;
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Table styling */
+table, th, td {
+    padding: 20px;
+    border: 2px solid;
+    border-collapse: collapse;
+    width: 100%;
+    border-width: 2px;
+}
+
+tr:hover {
+    background-color: blue;
+    color: white;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    background-color: lightblue;
+    min-width: 150px;
+    display: none;
+    position: absolute;
+    z-index: 10;
+}
+
+.dropdown-menu a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.dropdown-menu a:hover {
+    background-color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown:hover .dropdown-button {
+    background-color: yellow;
+}
+
+.dropdown-button {
+    background-color: green;
+    padding: 15px 30px;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dropdown-button:hover {
+    background-color: darkgreen;
+}
+
+/* Visibility vs Display */
+.hidden-element {
+    visibility: hidden; /* Element is invisible but still takes up space */
+}
+
+.removed-element {
+    display: none; /* Element is completely removed from the layout */
+}

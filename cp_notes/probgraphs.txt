@@ -1,0 +1,37 @@
+*Flight Routes Check*
+
+You got a DIRECTED graph with some edges and you have to find out wether you can reach any vertex starting from any 
+vertex. We will say that the graph is connected, the other case is trivial. 
+
+**TOOL LEARNED**
+
+-Lets call Topolino a node that can reach any other node and that can be reached from any other node, then if a graph 
+as a Topolino, every node of that graph is Topolino.
+-If you want to check in O(n) if a node x can be reached from any other node then you just swap all the edges and you do 
+dfs from the node x.
+
+
+*Milk Visits*
+
+
+*Tree Distances II* 
+
+Given a tree determine for each node the sum of the distances between that node and all the remaining one.
+
+
+*Graph Girth* 
+
+About shortest path with unweighted edges, that we remind can be done with bfs by keeping the parents and then backtracking, 
+this problem asks to find the shortest cycle, this can be done in O(n^2). 
+
+
+*MooTube* 
+
+You have a weighted graph and you want to answer q queries k v: you need to find out how many nodes you can reach from node v 
+by traversing only nodes whose weight is greater or equal (the same if is less or equal), the key observation is that as you 
+decrease k you keep adding edges and so you sort the queries by k, while you add edges you can use a dsu to compute the number 
+of nodes in the connected component of v.
+
+
+
+
