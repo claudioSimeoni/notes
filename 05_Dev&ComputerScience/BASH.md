@@ -98,7 +98,7 @@ As you can see, quotes "" are not strictly necessary, you can put them or not wh
 
 With the pipe | you can give the result of command a to a command b as in the example.
 
-```bash 
+```c++
 ls -l | grep god 
 
 echo "bruma" > file.txt #overwrites 

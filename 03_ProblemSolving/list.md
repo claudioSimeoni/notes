@@ -1,0 +1,3 @@
+- Try the reverse approach, start from the end of the problem and go backwards. 
+- Suppose you are in the final situation and guess which stuff must be in a single way otherwise you could do better. 
+- Change the thing you iterate through.

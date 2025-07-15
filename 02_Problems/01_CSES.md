@@ -21,3 +21,8 @@ This is a typical situation: you need to count how many subarrays have sum x, th
 ## Sum of two values
 
 By using two pointers you can easily compute how many couples have a certain sum x, but also how many of them have sum > x etc... You can also see [Coloring Game](https://codeforces.com/contest/2112/problem/C).
+
+--- 
+## Range Update Queries
+
+Remember this simple trick of storing the diff array and then simply modifying the extremes to add or remove x to an entire range, then you simply query with a segment on the diff array. 

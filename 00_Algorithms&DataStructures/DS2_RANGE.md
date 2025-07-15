@@ -24,7 +24,7 @@ Its structure is quite easy, each node stores the merge of the two children, the
 
 ## BIT (Binary index tree / Fenwick Tree)
 
-The **Bit** is a data structure that is built in O(n * log n) that supports updating an element in O(log n) and range queries on both **ASSOCIATIVE** AND **INVERTIBLE** merging functions (sum, xor ...) in O(log n). 
+The **Bit** is a data structure that do static minimum query require a sparse table? what isis built in O(n * log n) that supports updating an element in O(log n) and range queries on both **ASSOCIATIVE** AND **INVERTIBLE** merging functions (sum, xor ...) in O(log n). 
 
 It is typically preferred when dealing with those types of merging because it is easier to implement but it is actually less general and i usually prefer the segment. The idea behind it is that every cell of the array stores the sum of the previous 2 * k elements before it including itself, where k is the maximum power dividing the cell's index. The array is 1 indexed. 
 
@@ -37,3 +37,5 @@ A **sparse table** is a **static** data structure that is built in O(n * log n) 
 The idea behind is that you store for each index i of the array, the sum of ranges starting from it with length 2 * k, these are log n ranges for each index and can be computed in O(n * log n) recursively. Now every range query can be computed in O(1) by merging two ranges, note that we can do so because of idempotence. 
 
 *A cool thing is that you can build using a bit or a segment a weakened **Order statistic tree** (a ds that is like a set but supporting finding the position of an element and finding the ith element), the size N must be treatable. The first can be achieved by querying on a range, while the second one needs (log n) ^ 2 because you also binary search*
+
+>A quite strange way to solve range minimum queries is to build the **cartesian tree** and then to answer queries you find the lca between the numbers at the borders of the subarray. 

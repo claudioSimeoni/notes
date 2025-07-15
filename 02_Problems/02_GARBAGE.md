@@ -25,3 +25,7 @@ A good idea here to use a cycle decomposition, a permutation can be divided into
 #### [Matrix game ~CF1800](https://codeforces.com/contest/2120/problem/D)
 
 Nice but remember when you want the lexicographically smaller to be greedy. 
+
+#### [Minimize the Difference](https://codeforces.com/contest/2013/problem/D)
+
+Nice problem, once you find out how to bound min and max you are guaranteed that you can play it optimally so that you reach max - min. 

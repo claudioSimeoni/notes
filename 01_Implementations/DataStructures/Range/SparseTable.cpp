@@ -66,4 +66,4 @@ int main(){
     }
 }
 
-// https://judge.yosupo.jp/problem/staticrmq
+// Static Range Minimum Queries CSES 

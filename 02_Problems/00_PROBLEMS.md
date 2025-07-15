@@ -48,13 +48,39 @@ I know i write this all the time but this is such a good problem: firstly you ha
 ---
 ## [Fewer Batteries ~CF1700](https://codeforces.com/contest/2110/problem/D)
 
-No way this problem is SO FUCKING COOL, firstly the typical idea of watching everything **as if it was a graph**, in this case it is a DAG and it is already topsorted. Now the second great idea is that you can use **DP on DAG** to find out the maximum number of battery you can have at each index. Now the God idea is that **if you want to find out the maximum or minimum weight, so that if you traverse only edges bigger or smaller than it you can eventually reach some node from another one, you can do it by binary searching and each time using only edges bigger or equal than that value.** 
+No way, this problem is really great, firstly the typical idea of watching everything **as if it was a graph**, in this case it is a DAG and it is already topsorted. Now the second great idea is that you can use **DP on DAG** to find out the maximum number of battery you can have at each index. Now the God idea is that **if you want to find out the maximum or minimum weight, so that if you traverse only edges bigger or smaller than it you can eventually reach some node from another one, you can do it by binary searching and each time using only edges bigger or equal than that value.** 
 
 --- 
 ## [Yasya and the Mysterious Tree ~CF2300](https://codeforces.com/problemset/problem/1980/G)
 
 **If you need to xor all the edges along some path of a tree the good idea is to root the tree and computing the xor from the root,** then because the xor has itself as an inverse you can simply query `d[a] and d[b]` to get the xor along that path. Then here we also have the typical idea of **finding the maximum xor between a number and a set of numbers, this can be done with a trie**. 
 
+---
+## [Turtle and an Incomplete Sequence ~CF1800](https://codeforces.com/problemset/problem/1981/C)
+
+Once again the clever idea of seeing everything as a graph, if you link $x$ with $\lfloor x/2 \rfloor$ you can see everything as a graph like the following: 
+
+```
+			 1
+		   /   \ 
+		 2       3 
+	   ...       
+```
+
+From this you simply LCA. 
+
+---
+## [Unique Median ~CF2200](https://codeforces.com/contest/2056/problem/D)
+
+Nice problem, here you have the typical **trick of the median** that if you want to compute how many subarrays have a certain median you simply substitute every element > x with 1 and the others with -1, then if you want that median you need for the subarray sum to be <= 0. Here the observation was that you actually want to compute the subarrays that are not good instead of the good ones and the not good are those with subarray sum 0. 
+
+---
+## [Non-academic Problem ~CF1900](https://codeforces.com/problemset/problem/1986/F)
+
+New theory element learned: how to find bridges in a graph, you simply use a dfs tree, you mark the discovery time in an array and then you find out the least disc time vertex you can reach by using **back edges**.
 
 
- // dp su dag game routes
+
+
+
+// dp su dag game routes 

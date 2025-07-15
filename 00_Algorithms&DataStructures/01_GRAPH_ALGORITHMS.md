@@ -74,3 +74,23 @@ About SCC, the most common way to compute it is using **Kosaraju's Algorithm**, 
 
 The problem of **satisfiability** is an NP problem that requires to find, given a boolean formula with boolean variables $x_i$, the values of $x_i$ for which the formula is true. Well in some specific cases it turns out that you can do it in polynomial time. This is the case of 2-SAT, in this problem you are given a boolean formula $(x_a \lor x_b) \land ... \land (x_j \lor x_i)$ and you need to solve the satisfiability problem. You begin by building a graph with nodes $x_i$ and $\lnot x_i$ where if $x_i$ and $x_j$ are in the same block you link node $\lnot x_i$ to $x_j$ and $\lnot x_j$ to $x_i$. You then compute connected components of this graph. Now you can build a **component graph** that by construction is a **DAG**, and from here you top-sort it and you insert each component from the end of the original array, avoiding components with elements that where already inserted.
 
+---
+## ARTICULATION POINTS AND BRIDGES 
+
+To find bridges and ap you build a dfs tree, you also store the discovery time of each node, now back edges only connect a node with ancestors so their discovery time will be less than the node's one, while you do so you keep track of the lowest discovery time node you can reach from the subtree.
+
+- Now for **bridges** you just find out if a node x has some child y that have a low[y] > disc[x], in this case xy is a bridge. 
+- Finding **articulation points** is a bit harder, you must keep track of the dfs tree and now if you are the root and have more than one child you are an art. pt. or if you are a generic node and one of you child have low[y] >= disc[x] you are an art. pt., note that differently from the previous case here you must to use the dfstree to analyze children. 
+
+For the second case cses **<span style="color: palegreen">Forbidden Cities</span>** is such a good problem even though i didn't finish it yet. Here you both need to build the **block-cut tree** which i found quite hard, and another interesting idea **to find out if a node x lies onto the path from a to b, you can use lca in the following way:** 
+
+```c++
+ll ab = lca(a, b), ac = lca(a, c), cb = lca(c, b);
+if(ab == c || (cb == ab && ac == c) || (ac == ab && cb == c)){
+	 cout << "yes\n";
+
+}
+else cout << "no\n";
+```
+
+>**BCC** (Biconnected Components) are those obtained after removing articulation points while **2CC** (2-edges Connected Components) are those obtained after removing bridges. 
